@@ -1,35 +1,99 @@
 
-
-body {
-    background-color: rgba(78, 78, 161, 0.596);
+* {
+    margin: 0;
+    padding: 0;
 }
 
-#frame {
 
-    width: 100px;
+body {
+    background-color: rgba(2, 2, 12, 0.979);
+}
+
+#container {
+    
+    width: 900px;
     height: 100vh;
-    position: relative;
+   position: relative;
+    /* overflow: hidden; */
+    margin: auto;
+    border: 1px solid black;
+}
+
+#frame1 {
+
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: -200px;
     background-color: rgba(185, 182, 172, 0.534);
     margin: auto;
+    overflow-y: hidden;
+    z-index: 11;
     /* transform: matrix(0, 1, -1, 0, 0, 0) */
-    
-    transform: matrix3d( -1, 0, 0, 0, 0, 1, 0, -0.02, 0, 0, 1, 0, 0, 0, 0, 1) translateY(-100px);
+    transform: matrix3d( 2, 5, 0, 0, -3.5, 1, 0, -0.01, 0, 0, 1, 0, 0, 0, 0, 2) ;
+ 
    
 }
 
- .child {
+
+
+#frame2 {
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: -200px;
+    background-color: rgba(185, 182, 172, 0.534);
+    margin: auto;
+    overflow-y: hidden;
+    z-index: 11;
+    transform: matrix3d( -2, 5, 0, 0, 3.5, 1, 0, -0.01, 0, 0, 1, 0, 0, 0, 0, 2) ;
+}
+
+#road {
+    width: 50%;
+    height: 76%;
+    position: absolute;
+    top: 110px;
+    left: 25%;
+    /* bottom: 50px; */
+    overflow-y: hidden;
+    background-color: rgb(61, 51, 51);
+    transform: matrix3d( 1, 0, 0, 0, 0, 3, 2, -0.013, 0, 0, 1, 0, 0, 0, 0, 2) ;
+
+    /* transform: rotatey(45deg); */
+}
+
+ .child1, .child2 {
     width: 100%;
-    height: 8px;
-    margin-top: 5px;
-    background-color: rgb(240, 255, 255);
+    height: 10px;
+    /* margin-top: 5px; */
+    /* background-color: rgb(240, 255, 255); */
 }
 
 #car {
     position: absolute;
-    width: 20px;
-    height: 5px;
-    background-color: rgb(29, 20, 20);
-    top: 440px;
-    left: 40px;
-    z-index: 1;
+    width: 50px;
+    height: 10px;
+    background-color: rgb(245, 12, 12);
+    /* bottom: 250px; */
+    top: 60%;
+    left: 410px;
+    /* right: 10px; */
+    border-radius: 30%;
+    z-index: 15;
+     transform: matrix3d( 1, 0, 0, 0, 0, 1, 1, -0.02, 0, 0, 1, 0, 0, 0, 0, 2) ;
 }
+.car {
+    position: relative;
+    width: 30px;
+    height: 10px;
+   
+    border-radius: 40%;
+    z-index: 15;
+     /* transform: matrix3d( 1, 0, 0, 0, 0, 1, 1, -0.02, 0, 0, 1, 0, 0, 0, 0, 2) ; */
+}
+
+
+
