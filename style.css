@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    user-select: none;
 }
 
 
@@ -50,6 +51,12 @@ body {
     z-index: 11;
     transform: matrix3d( -2, 5, 0, 0, 3.5, 1, 0, -0.01, 0, 0, 1, 0, 0, 0, 0, 2) ;
 }
+.child1, .child2 {
+    width: 100%;
+    height: 10px;
+    /* margin-top: 5px; */
+    /* background-color: rgb(240, 255, 255); */
+}
 
 #road {
     width: 50%;
@@ -65,11 +72,15 @@ body {
     /* transform: rotatey(45deg); */
 }
 
- .child1, .child2 {
-    width: 100%;
-    height: 10px;
-    /* margin-top: 5px; */
-    /* background-color: rgb(240, 255, 255); */
+#line {
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    border-left: 1px dashed white;
+    border-right: 1px dashed white;
+    left: 49%;
+    top: 0;
+    transform: matrix3d( 1, 0, 0, 0, 0, 3, 2, -0.013, 0, 0, 1, 0, 0, 0, 0, 2) ;
 }
 
 #car {
@@ -85,7 +96,7 @@ body {
     z-index: 15;
      transform: matrix3d( 1, 0, 0, 0, 0, 1, 1, -0.02, 0, 0, 1, 0, 0, 0, 0, 2) ;
 }
-.car {
+.money {
     position: relative;
     width: 30px;
     height: 10px;
@@ -95,5 +106,33 @@ body {
      /* transform: matrix3d( 1, 0, 0, 0, 0, 1, 1, -0.02, 0, 0, 1, 0, 0, 0, 0, 2) ; */
 }
 
+
+#popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(247, 231, 7, 0.185);
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#popup h1 {
+    text-align: center;
+    color: rgb(8, 6, 8);
+}
+
+#info {
+    position: absolute;
+    /* width: 30%; */
+    height: 40px;
+    padding: 15px;
+    font-size: 20px;
+    top: 0;
+    left: 45%;
+    color: azure; 
+}
 
 
